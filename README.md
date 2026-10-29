@@ -6,6 +6,8 @@ The questions, in order: how many orders make it from purchase to delivery, how 
 
 Dataset: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce/data
 
+The dataset itself is not included in this repository and keeps its own licence. The code here is under the MIT licence.
+
 ## Scope
 
 I kept orders placed between 1 January 2017 and 31 August 2018, which is 99,092 orders. The few orders outside that range are too sparse to say anything about.
@@ -69,19 +71,22 @@ Returning customers are 2.14% of customers and 4.10% of revenue. Each brought in
 The totals agree across queries: 95,498 valid orders, 92,422 customers and R$13,093,865.52 in revenue appear in every table that should contain them. The 12.5-day delivery average equals the sum of the three stage averages (0.49 + 2.70 + 9.31 days). My first repeat-customer figure, from the data audit with looser filters, was 3.00% (2,801 customers), and it took a separate query to see that the difference to 2.14% comes mostly from orders placed at the same moment.
 
 ## Repository
-- `01_data_audit.sql`: checks on the raw tables, and the cleaned reviews view.
-- `02_funnel.sql`: order funnel, status breakdown, time spent in each stage, delivery time distribution and the monthly trend.
-- `03_cohort_retention.sql`: cohorts, retention by month, repeat customers, time to a second purchase and 90-day returns.
-- `04_revenue.sql`: revenue by month, by customer type, by category and by state.
-- `05_drop_off_drivers.sql`: delivery time against reviews, and first delivery and first review against returning.
-- `csv/`: the result of queries as a CSV, for dashboard creation 
+
+- `olist-product-analytics-sql/`: the five SQL files
+  - `01_data_audit.sql`: checks on the raw tables, and the cleaned reviews view.
+  - `02_funnel.sql`: order funnel, status breakdown, time spent in each stage, delivery time distribution and the monthly trend.
+  - `03_cohort_retention.sql`: cohorts, retention by month, repeat customers, time to a second purchase and 90-day returns.
+  - `04_revenue.sql`: revenue by month, by customer type, by category and by state.
+  - `05_drop_off_drivers.sql`: delivery time against reviews, and first delivery and first review against returning.
+- `Csv-Dashboard/`: the query results as CSV files, which the dashboard reads.
+- `olist_dashboard.pbix`: the Power BI dashboard.
 
 ## Running it
 
 1. Load the Olist CSVs into a MySQL database. I used a local one called `e_commerce_store`, with tables named `orders`, `customers`, `orders_items`, `product` and `order_reviews`. If yours are named differently, change the names in the queries.
 2. Run `01_data_audit.sql` first, since it creates the `v_reviews_clean` view that file 05 uses.
 3. Run the other files in order. Each query has a comment saying what it answers.
-4. The dashboard reads the CSVs in `csv/`. If you open it from a different folder, update the data source path under Transform data, then Data source settings.
+4. The dashboard reads the CSVs in `Csv-Dashboard/`. If you open it from a different folder, update the data source path under Transform data, then Data source settings.
 
 ## Dashboard
 
@@ -91,11 +96,14 @@ Three pages, built in Power BI from the query results. Orange marks something th
 2. Customers and retention: a cohort heatmap, days to a second purchase, 90-day returns by cohort, and by first delivery time and first review.
 3. Revenue: monthly revenue, top categories, top states, and returning customers' share of customers against their share of revenue.
 
-<img width="682" height="383" alt="Screenshot 2026-10-29 161248" src="https://github.com/user-attachments/assets/172aeeff-39c6-48b6-bf29-49101f74f215" />
+Orders and delivery:
 
+<img width="682" height="383" alt="Orders and delivery page of the dashboard" src="https://github.com/user-attachments/assets/172aeeff-39c6-48b6-bf29-49101f74f215" />
 
-<img width="673" height="379" alt="Screenshot 2026-10-29 161310" src="https://github.com/user-attachments/assets/f4c92b86-bfab-438e-be0f-8b317506d8f5" />
+Customers and retention:
 
+<img width="673" height="379" alt="Customers and retention page of the dashboard" src="https://github.com/user-attachments/assets/f4c92b86-bfab-438e-be0f-8b317506d8f5" />
 
-<img width="671" height="377" alt="Screenshot 2026-10-29 161339" src="https://github.com/user-attachments/assets/33508801-7800-4747-b736-f668de629bf8" />
+Revenue:
 
+<img width="671" height="377" alt="Revenue page of the dashboard" src="https://github.com/user-attachments/assets/33508801-7800-4747-b736-f668de629bf8" />
