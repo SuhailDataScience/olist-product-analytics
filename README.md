@@ -106,11 +106,11 @@ Three pages, built in Power BI from the query results. Orange marks something th
 2. Customers and retention: a cohort heatmap, days to a second purchase, 90-day returns by cohort, and by first delivery time and first review.
 3. Revenue: monthly revenue, top categories, top states, and returning customers' share of customers against their share of revenue.
 
-[<img width="682" height="383" alt="Screenshot 2026-10-29 161248" src="https://github.com/user-attachments/assets/172aeeff-39c6-48b6-bf29-49101f74f215" />
-]
+<img width="682" height="383" alt="Screenshot 2026-10-29 161248" src="https://github.com/user-attachments/assets/172aeeff-39c6-48b6-bf29-49101f74f215" />
 
-[<img width="673" height="379" alt="Screenshot 2026-10-29 161310" src="https://github.com/user-attachments/assets/f4c92b86-bfab-438e-be0f-8b317506d8f5" />
-]
 
-[<img width="671" height="377" alt="Screenshot 2026-10-29 161339" src="https://github.com/user-attachments/assets/33508801-7800-4747-b736-f668de629bf8" />
-]
+<img width="673" height="379" alt="Screenshot 2026-10-29 161310" src="https://github.com/user-attachments/assets/f4c92b86-bfab-438e-be0f-8b317506d8f5" />
+
+
+<img width="671" height="377" alt="Screenshot 2026-10-29 161339" src="https://github.com/user-attachments/assets/33508801-7800-4747-b736-f668de629bf8" />
+
