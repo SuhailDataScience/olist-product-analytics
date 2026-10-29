@@ -69,34 +69,19 @@ Returning customers are 2.14% of customers and 4.10% of revenue. Each brought in
 The totals agree across queries: 95,498 valid orders, 92,422 customers and R$13,093,865.52 in revenue appear in every table that should contain them. The 12.5-day delivery average equals the sum of the three stage averages (0.49 + 2.70 + 9.31 days). My first repeat-customer figure, from the data audit with looser filters, was 3.00% (2,801 customers), and it took a separate query to see that the difference to 2.14% comes mostly from orders placed at the same moment.
 
 ## Repository
-
-```
-olist-product-analytics/
-├── README.md
-├── sql/
-│   ├── 01_data_audit.sql
-│   ├── 02_funnel.sql
-│   ├── 03_cohort_retention.sql
-│   ├── 04_revenue.sql
-│   └── 05_drop_off_drivers.sql
-├── outputs/
-└── dashboard/
-    └── olist_dashboard.pbix
-```
-
 - `01_data_audit.sql`: checks on the raw tables, and the cleaned reviews view.
 - `02_funnel.sql`: order funnel, status breakdown, time spent in each stage, delivery time distribution and the monthly trend.
 - `03_cohort_retention.sql`: cohorts, retention by month, repeat customers, time to a second purchase and 90-day returns.
 - `04_revenue.sql`: revenue by month, by customer type, by category and by state.
 - `05_drop_off_drivers.sql`: delivery time against reviews, and first delivery and first review against returning.
-- `outputs/`: the result of each query as a CSV, plus screenshots of the dashboard.
+- `csv/`: the result of queries as a CSV, for dashboard creation 
 
 ## Running it
 
 1. Load the Olist CSVs into a MySQL database. I used a local one called `e_commerce_store`, with tables named `orders`, `customers`, `orders_items`, `product` and `order_reviews`. If yours are named differently, change the names in the queries.
 2. Run `01_data_audit.sql` first, since it creates the `v_reviews_clean` view that file 05 uses.
 3. Run the other files in order. Each query has a comment saying what it answers.
-4. The dashboard reads the CSVs in `outputs/`. If you open it from a different folder, update the data source path under Transform data, then Data source settings.
+4. The dashboard reads the CSVs in `csv/`. If you open it from a different folder, update the data source path under Transform data, then Data source settings.
 
 ## Dashboard
 
