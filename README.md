@@ -4,7 +4,7 @@ I wanted to know where an online marketplace loses orders and customers, and whe
 
 The questions, in order: how many orders make it from purchase to delivery, how long delivery takes, how many customers ever buy a second time, and whether a slow first delivery or a bad first review has anything to do with that.
 
-Dataset: [https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce/data]
+Dataset: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce/data
 
 ## Scope
 
@@ -107,4 +107,10 @@ Three pages, built in Power BI from the query results. Orange marks something th
 3. Revenue: monthly revenue, top categories, top states, and returning customers' share of customers against their share of revenue.
 
 [<img width="682" height="383" alt="Screenshot 2026-10-29 161248" src="https://github.com/user-attachments/assets/172aeeff-39c6-48b6-bf29-49101f74f215" />
+]
+
+[<img width="673" height="379" alt="Screenshot 2026-10-29 161310" src="https://github.com/user-attachments/assets/f4c92b86-bfab-438e-be0f-8b317506d8f5" />
+]
+
+[<img width="671" height="377" alt="Screenshot 2026-10-29 161339" src="https://github.com/user-attachments/assets/33508801-7800-4747-b736-f668de629bf8" />
 ]
