@@ -1,0 +1,6 @@
+days_between_2nd_purchase,total_cust,returning_pct
+"0-7 days",202,10.20
+"8-30 days",386,19.49
+"31-90 days",501,25.30
+"91-180 days",417,21.06
+"180+ days",474,23.94

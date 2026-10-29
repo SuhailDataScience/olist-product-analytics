@@ -1,0 +1,6 @@
+delivery_range,total_orders,orders_with_reviews,avg_review_score,low_score_pct
+"up to 7 days",30298,30157,4.41,7.51
+"8-14 days",37643,37440,4.30,9.09
+"15-21 days",16057,15942,4.12,12.16
+"22-30 days",7263,7195,3.55,25.81
+"over 30 days",4237,4125,2.19,64.92

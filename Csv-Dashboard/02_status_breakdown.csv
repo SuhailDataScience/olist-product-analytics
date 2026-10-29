@@ -1,0 +1,9 @@
+order_status,puschased,approved,picked,delivered
+delivered,96211,96197,96209,96203
+unavailable,602,602,0,0
+shipped,1097,1097,1097,0
+canceled,580,464,70,1
+invoiced,296,296,0,0
+processing,299,299,0,0
+approved,2,2,0,0
+created,5,0,0,0

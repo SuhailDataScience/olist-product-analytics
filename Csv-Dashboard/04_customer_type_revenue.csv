@@ -1,0 +1,3 @@
+cust_segment,total_cust,total_orders,total_revenue,revenue_pct,revenue_per_cust,avg_order_value
+One-time,90442,91249,12556669.14,95.90,138.84,137.61
+Returned,1980,4249,537196.38,4.10,271.31,126.43

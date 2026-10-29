@@ -1,0 +1,5 @@
+review_type,total_cust,returned_within_90days,returned_pct
+"1-2 review stars",10085,103,1.02
+"3 review stars",6403,71,1.11
+"4-5 review stars",57757,788,1.36
+"No reviews",527,4,0.76

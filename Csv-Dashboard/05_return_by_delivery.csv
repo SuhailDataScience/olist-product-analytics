@@ -1,0 +1,6 @@
+delivered_type,total_cust,returned_90_days,returned_90_days_pct
+"up to 7 days",20151,303,1.50
+"8-14 days",29741,380,1.28
+"15-21 days",14212,182,1.28
+"22-30 days",6671,68,1.02
+"over 30 days",3997,33,0.83
